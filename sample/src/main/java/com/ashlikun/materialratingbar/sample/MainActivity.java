@@ -5,7 +5,6 @@
 
 package com.ashlikun.materialratingbar.sample;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
@@ -15,23 +14,16 @@ import android.view.animation.LinearInterpolator;
 import android.view.animation.Transformation;
 import android.widget.RatingBar;
 
-import butterknife.BindViews;
-import butterknife.ButterKnife;
-
 public class MainActivity extends AppCompatActivity {
 
-    @BindViews({
-            R.id.library_decimal_ratingbar,
-    })
-    RatingBar[] mDecimalRatingBars;
+    RatingBar[] mDecimalRatingBars = new RatingBar[1];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.main_activity);
-        ButterKnife.bind(this);
-
+        mDecimalRatingBars[0] = findViewById(R.id.library_decimal_ratingbar);
         mDecimalRatingBars[0].startAnimation(new RatingAnimation());
     }
 
@@ -44,8 +36,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.action_about:
-                startActivity(new Intent(this, AboutActivity.class));
             default:
                 return super.onOptionsItemSelected(item);
         }

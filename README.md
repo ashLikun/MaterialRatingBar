@@ -16,7 +16,10 @@ allprojects {
 
 ```gradle
 dependencies {
-    compile 'com.github.ashLikun:MaterialRatingBar:{latest version}'
+     //如果不使用内部的Android  designVersion（27.0.2） 可以这样
+     implementation ('com.github.ashLikun:MaterialRatingBar:{latest version}'){
+         exclude group: 'com.android.support'
+     }
 
 
 }

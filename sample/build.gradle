@@ -45,7 +45,7 @@ buildscript {
     }
 }
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile rootProject.ext.v7AppCompat
-    compile project(':library')
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation rootProject.ext.v7AppCompat
+    implementation project(':library')
 }

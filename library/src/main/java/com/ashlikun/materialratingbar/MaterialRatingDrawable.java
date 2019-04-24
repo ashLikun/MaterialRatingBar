@@ -9,10 +9,11 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.LayerDrawable;
-import android.support.v7.content.res.AppCompatResources;
 import android.view.Gravity;
 
 import com.ashlikun.materialratingbar.internal.ThemeUtils;
+
+import androidx.appcompat.content.res.AppCompatResources;
 
 public class MaterialRatingDrawable extends LayerDrawable {
     private boolean isNeedTint;//是否需要设置渲染，一般如果使用者在XML里面设置了background这边就为false
